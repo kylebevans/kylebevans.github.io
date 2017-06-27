@@ -1,1 +1,6 @@
-hello world
+---
+title: hello world
+layout: post
+---
+
+Hello World
