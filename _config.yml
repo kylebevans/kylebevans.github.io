@@ -4,6 +4,13 @@ name: Kyle Evans
 
 description: Networking, Infrastructure, and DevOps
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
 footer-links:
   github: kylebeevans
   linkedin:
