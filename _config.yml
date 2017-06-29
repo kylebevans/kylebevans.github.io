@@ -1,1 +1,24 @@
 theme: jekyll-theme-cayman
+
+name: Kyle Evans
+
+description: Networking, Infrastructure, and DevOps
+
+footer-links:
+  github: kylebeevans
+  linkedin:
+  twitter: kylebe
+  
+url: http://getworking.org
+
+permalink: /:title/
+
+gems:
+  - jekyll-sitemap
+  
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
