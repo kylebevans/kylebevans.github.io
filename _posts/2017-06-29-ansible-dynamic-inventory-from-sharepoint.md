@@ -3,6 +3,7 @@ layout: default
 title:  "Ansible Dynamic Inventory from SharePoint"
 date:   2017-06-29 02:46:01 -0400
 categories: ansible sharepoint
+permalink: /ansible-dynamic-inventory-from-sharepoint/
 ---
 
 Out in Enterprise-land, SharePoint is a fact of life.  If you are using a SharePoint list as the source of truth for your equipment documentation, then you can use an Ansible Dynamic Inventory Python script to generate your Ansible inventory.  Basically, instead of trying to keep a file like /etc/ansible/hosts up to date, you can specify a python script that will generate your inventory dynamically from your source of truth, in this case SharePoint.
