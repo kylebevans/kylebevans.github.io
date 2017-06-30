@@ -4,6 +4,7 @@ title:  "Ansible Dynamic Inventory from SharePoint"
 date:   2017-06-29 02:46:01 -0400
 categories: ansible sharepoint
 permalink: /ansible-dynamic-inventory-from-sharepoint/
+commentIssueId: 1
 ---
 
 <h1 class="entry-title">
