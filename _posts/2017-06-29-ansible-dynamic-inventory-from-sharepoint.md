@@ -285,3 +285,8 @@ for device in data['d']['results']:
 
 print json.dumps(inventory, indent=4, separators=(',', ': '))
 ```
+
+Links:
+
+<a href="http://docs.ansible.com/ansible/dev_guide/developing_inventory.html">Ansible Dynamic Inventory</a>
+<a href="https://dev.office.com/sharepoint/docs/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints">SharePoint REST API</a>
