@@ -63,7 +63,7 @@ response = requests.get("https://sharepoint.example.com/department/it/_api/web/l
 data = response.json()
 ```
 
-The code above connects to SharePoint, authenticates, asks for the list data in JSON format, and saves it in a JSON object called "data."
+The code above connects to SharePoint, authenticates, asks for the list data in JSON format, and saves it in a JSON object called "data."  Make sure you use your actual AD domain if it's not "AD."
 
 Next, let's use a Python dictionary to prepare our output.  We will create groups by model and set a "netos" var for each group.  Setting up the dictionary is a little verbose since we have to initialize each level of the hierarchy as a dict or a list as appropriate:
 
