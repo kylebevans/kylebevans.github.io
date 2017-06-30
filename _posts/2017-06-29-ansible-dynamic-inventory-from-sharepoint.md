@@ -128,3 +128,44 @@ Finally, we output our inventory in JSON:
 ```python
 print json.dumps(inventory, indent=4, separators=(',', ': '))
 ```
+
+
+Sample output:
+
+```json
+{
+    "c4500s": {
+        "hosts": [
+            "dist-switch1",
+            "dist-switch2",
+            "dist-switch3"
+        ],
+        "children": [],
+        "vars": {
+            "netos": "ios"
+        }
+    },
+    "c3750Xs": {
+        "hosts": [
+            "room10-switch1",
+            "room20-switch1",
+            "room30-switch2"
+        ],
+        "children": [],
+        "vars": {
+            "netos": "ios"
+        }
+    },
+    "c5516Xs": {
+        "hosts": [
+            "firewall1",
+            "firewall2",
+            "firewall3"
+        ],
+        "children": [],
+        "vars": {
+            "netos": "asa"
+        }
+    }
+}
+```
