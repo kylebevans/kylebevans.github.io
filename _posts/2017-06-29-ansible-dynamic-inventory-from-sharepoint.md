@@ -169,3 +169,107 @@ Sample output:
     }
 }
 ```
+
+Usage with ansible-playbook:
+
+```
+export SHAREPOINTPASSWORD='hithere'
+
+ansible-playbook main.yml -vvvv -f 10 -i /etc/ansible/ansible_dyn_inventory.py --extra-vars '{"cli": {"username": "thisguy","password": "SneakyPassword11","host": "{{ inventory_hostname }}","timeout": "60"}, "asacli": {"username": "thisguy","password": "SneakyPassword11","host": "{{ inventory_hostname }}","timeout": "60","authorize": "yes","auth_pass": "SneakyPassword11"}}'
+```
+
+
+Full script:
+
+```
+#!/bin/python
+
+import os, sys, getopt
+import json
+import requests
+from requests_ntlm import HttpNtlmAuth
+
+username = 'sharepointuser'
+password = os.environ['SHAREPOINTPASSWORD']
+
+try:
+  opts, args = getopt.getopt(sys.argv[1:],"h",["list","host"])
+except getopt.GetoptError:
+  print "%s [--list]" % __file__
+  print "%s [--host <hostname>]" % __file__
+  sys.exit(2)
+
+if len(sys.argv) < 2:
+  print "%s [--list]" % __file__
+  print "%s [--host <hostname>]" % __file__
+  sys.exit(2)
+
+for opt, arg in opts:
+  if opt == '-h':
+    print "%s [--list]" % __file__
+    print "%s [--host <hostname>]" % __file__
+    sys.exit()
+  elif opt == '--host':
+    print "{"
+    print "}"
+    sys.exit()
+  # else must be --list, so go on with script
+
+headers = {'Accept': 'application/json;odata=verbose'}
+response = requests.get("https://sharepoint.example.com/department/it/_api/web/lists/GetByTitle('Devices')/Items",auth=HttpNtlmAuth("ad\\" + username, password), headers=headers)
+data = response.json()
+
+
+inventory = {}
+inventory['c6500s'] = {}
+inventory['c4500s'] = {}
+inventory['c3850s'] = {}
+inventory['c3750Xs'] = {}
+inventory['c3560s'] = {}
+inventory['c5516Xs'] = {}
+inventory['c9372s'] = {}
+
+inventory['c6500s']['hosts'] = []
+inventory['c4500s']['hosts'] = []
+inventory['c3850s']['hosts'] = []
+inventory['c3750Xs']['hosts'] = []
+inventory['c3560s']['hosts'] = []
+inventory['c5516Xs']['hosts'] = []
+inventory['c9372s']['hosts'] = []
+
+inventory['c6500s']['vars'] = {'netos': 'ios'}
+inventory['c4500s']['vars'] = {'netos': 'ios'}
+inventory['c3850s']['vars'] = {'netos': 'ios'}
+inventory['c3750Xs']['vars'] = {'netos': 'ios'}
+inventory['c3560s']['vars'] = {'netos': 'ios'}
+inventory['c5516Xs']['vars'] = {'netos': 'asa'}
+inventory['c9372s']['vars'] = {'netos': 'nxos'}
+
+inventory['c6500s']['children'] = []
+inventory['c4500s']['children'] = []
+inventory['c3850s']['children'] = []
+inventory['c3750Xs']['children'] = []
+inventory['c3560s']['children'] = []
+inventory['c5516Xs']['children'] = []
+inventory['c9372s']['children'] = []
+
+for device in data['d']['results']:
+  if device['Model'] == 'Catalyst 6509-E':
+    inventory['c6500s']['hosts'].append(device['Title'])
+  elif device['Model'] == 'Catalyst 4507R+E':
+    inventory['c4500s']['hosts'].append(device['Title'])
+  elif device['Model'] == 'Catalyst 3850':
+    inventory['c3850s']['hosts'].append(device['Title'])
+  elif device['Model'] == 'Catalyst 3750X':
+    inventory['c3750Xs']['hosts'].append(device['Title'])
+  elif device['Model'] == 'Catalyst 3560' or device['Model'] == 'Catalyst 3560G':
+    inventory['c3560s']['hosts'].append(device['Title'])
+  elif device['Model'] == 'ASA 5516-X':
+    inventory['c5516Xs']['hosts'].append(device['Title'])
+  elif device['Model'] == 'Nexus 9372':
+    inventory['c9372s']['hosts'].append(device['Title'])
+
+
+
+print json.dumps(inventory, indent=4, separators=(',', ': '))
+```
