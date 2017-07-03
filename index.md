@@ -8,3 +8,5 @@ layout: default
   {% assign commentIssueId = post.commentIssueId %}
   {% include post_detail.md %}
 </div>
+
+hi {{ commentIssueId}}
