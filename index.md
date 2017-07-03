@@ -1,5 +1,6 @@
 ---
 layout: default
+commentIssueId: 1
 ---
 
 <div class="blog-index">  
