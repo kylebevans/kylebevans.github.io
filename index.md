@@ -5,7 +5,7 @@ layout: default
 <div class="blog-index">  
   {% assign post = site.posts.first %}
   {% assign content = post.content %}
-  {% assign page.commentIssueId = post.commentIssueId %}
+  {% assign page = site.posts.first %}
   {% include post_detail.md %}
 </div>
 
