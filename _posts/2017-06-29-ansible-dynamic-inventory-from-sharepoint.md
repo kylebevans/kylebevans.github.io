@@ -16,6 +16,8 @@ commentIssueId: 1
 {% endif %}
 </h1>
 
+{{ page.commentIssueId }}
+
 June 29, 2017
 
 Out in Enterprise-land, SharePoint is a fact of life.  If you are using a SharePoint list as the source of truth for your equipment documentation, then you can use an Ansible Dynamic Inventory Python script to generate your Ansible inventory.  Basically, instead of trying to keep a file like /etc/ansible/hosts up to date, you can specify a python script that will generate your inventory dynamically from your source of truth, in this case SharePoint.
