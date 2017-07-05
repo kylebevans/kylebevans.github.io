@@ -4,8 +4,6 @@ layout: null
  
 {% assign post = site.posts.first %}
 
-{% raw %}
-<!DOCTYPE html>
-{% endraw %}
+\<!DOCTYPE html>
 
 {{ post | replace:'<!DOCTYPE html>','' }}
