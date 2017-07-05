@@ -7,6 +7,7 @@ div#nav {
 
 div#nav nav ul {
   list-style-type: square;
+  padding-left: 1vw;
 }
 
 div#nav nav li a {
