@@ -24,16 +24,7 @@
       {% endif %}
     </section>
     <div id="navmain">
-    <div id="nav">
-      <nav>
-        <h3>Blog Posts</h3>
-        <ul>
-        {% for post in site.posts %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-      </nav>
-    </div>
+    
     <div id="main-content">
     <section class="main-content">
       
@@ -76,6 +67,16 @@
 
       {% include footer.html %}
     </section>
+  </div>
+  <div id="nav">
+    <nav>
+      <h3>Blog Posts</h3>
+      <ul>
+      {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
   </div>
     <script type="text/javascript">
     var max = -1;
