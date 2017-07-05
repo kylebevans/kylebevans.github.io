@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-test1
+test2
 
 
 {% assign post = site.posts.first %}
