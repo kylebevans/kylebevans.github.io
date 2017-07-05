@@ -6,7 +6,9 @@ div#nav {
 }
 
 div#nav nav ul {
+  display: block;
   list-style-type: square;
+  list-style-position: inside
   padding-left: 1vw;
 }
 
