@@ -1,9 +1,14 @@
 nav {
-    float: left;
+  float: left;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+nav li a {
+  display: block;
 }
