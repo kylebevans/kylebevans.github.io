@@ -23,6 +23,7 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
     </section>
+    <div id="navmain">
     <div id="nav">
       <nav>
         <h3>Blog Posts</h3>
@@ -74,6 +75,17 @@
 
       {% include footer.html %}
     </section>
+    <script type="text/javascript">
+    var max = -1;
+$('.clearfix > div').each(function() {
+var h = $(this).height();
+max = h > max ? h : max;
+        
+$(this).css({'min-height': max});
+});
+
+</script>
+  </div>
     
 
     {% if site.google_analytics %}
