@@ -2,6 +2,7 @@ div#navmain {
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
 }
 
 div#navmain>div {
