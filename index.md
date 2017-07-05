@@ -1,9 +1,10 @@
 ---
 layout: null
 ---
- 
+
+<!DOCTYPE html>
+
 {% assign post = site.posts.first %}
 
-\<!DOCTYPE html>
 
 {{ post | replace:'<!DOCTYPE html>','' }}
