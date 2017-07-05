@@ -1,5 +1,6 @@
 div#nav {
   float: left;
+  padding-left: .5vw;
   padding-right: 1vw;
   width: 20vw;
 }
