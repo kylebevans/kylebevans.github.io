@@ -15,4 +15,5 @@ div#nav nav ul {
 
 div#nav nav li a {
   font-size: .875em;
+  padding: 0;
 }
