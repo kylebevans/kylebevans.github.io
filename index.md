@@ -1,8 +1,8 @@
 ---
 layout: none
 ---
-{% include doctype.html %}
+{% include doctype.html | xml_escape %}
 {% assign post = site.posts.first %}
-{{ post }}
+{{ post | replace:'<!DOCTYPE html>','' }}
 
-test7
+test8
