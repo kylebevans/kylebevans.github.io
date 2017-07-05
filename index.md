@@ -1,11 +1,7 @@
 ---
 layout: none
 ---
-
-
 {% assign post = site.posts.first %}
-
-
 {{ post }}
 
-test3
+test4
