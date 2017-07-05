@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-{% include doctype.html | xml_escape %}
+{{ <!DOCTYPE html> }}
 {% assign post = site.posts.first %}
 {{ post | replace:'<!DOCTYPE html>','' }}
 
