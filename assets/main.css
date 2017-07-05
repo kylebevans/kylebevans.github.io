@@ -2,11 +2,10 @@ div#navmain {
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column;
 }
 
-div#navmain>div {
-  flex: 1;
+div#main-content {
+  flex: 3;
 }
 
 div#nav {
@@ -14,6 +13,7 @@ div#nav {
   padding-left: .5vw;
   padding-right: 1vw;
   width: 20vw;
+  flex: 1;
 }
 
 div#nav nav ul {
