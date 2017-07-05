@@ -14,7 +14,3 @@ div#nav nav li a {
   display: block;
   font-size: .875em;
 }
-
-div#nav nav li a:hover {
-  transform: rotate(45deg);
-}
