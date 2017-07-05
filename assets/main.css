@@ -1,14 +1,15 @@
-nav {
+div#nav {
   float: left;
+  padding-right: 50px;
 }
 
-nav ul {
+div#nav nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-nav li a {
+div#nav nav li a {
   display: block;
   font-size: 3em;
 }
