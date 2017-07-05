@@ -26,11 +26,13 @@
 
     <section class="main-content">
       <div id="nav">
-        <ul>
-        {% for post in site.posts %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
+        <nav>
+          <ul>
+          {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+          </ul>
+        </nav>
       </div>
       {{ content }}
       
