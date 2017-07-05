@@ -8,13 +8,11 @@ div#nav {
 div#nav nav ul {
   display: block;
   list-style-type: square;
-  list-style-position: inside;
   padding: 0;
   margin: 0;
 }
 
 div#nav nav li {
-  display: block;
   font-size: .875em;
   padding: 0;
 }
