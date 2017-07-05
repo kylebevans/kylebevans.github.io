@@ -1,8 +1,8 @@
 ---
 layout: none
 ---
-\<\!DOCTYPE html\>
+\\<\\!DOCTYPE html\\>
 {% assign post = site.posts.first %}
 {{ post | replace:'<!DOCTYPE html>','' }}
 
-test10
+test11
