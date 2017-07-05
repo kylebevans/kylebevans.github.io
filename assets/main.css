@@ -1,3 +1,13 @@
+div#navmain {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+div#navmain>div {
+  flex: 1;
+}
+
 div#nav {
   float: left;
   padding-left: .5vw;
