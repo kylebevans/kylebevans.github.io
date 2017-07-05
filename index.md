@@ -3,6 +3,6 @@ layout: none
 ---
 {% include doctype.html %}
 {% assign post = site.posts.first %}
-{{ post | replace:'<!DOCTYPE html>','' }}
+{{ post }}
 
-test6
+test7
