@@ -9,7 +9,7 @@ div#nav nav ul {
   display: block;
   list-style-type: square;
   list-style-position: outside;
-  padding: .2vw;
+  padding: 1vw;
   margin: .5vw;
 }
 
