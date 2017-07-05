@@ -1,10 +1,10 @@
 div#nav {
   float: left;
-  padding-right: 50px;
+  padding-right: 1vw;
+  width: 10vw;
 }
 
 div#nav nav ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
