@@ -9,6 +9,8 @@ div#nav nav ul {
   display: block;
   list-style-type: square;
   list-style-position: inside
+  padding: 0vw;
+  margin: 0vw;
 }
 
 div#nav nav li a {
