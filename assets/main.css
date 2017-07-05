@@ -6,10 +6,9 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 60px;
 }
 
 nav li a {
   display: block;
-  font-size: 0.625em;
+  font-size: 0.75em;
 }
