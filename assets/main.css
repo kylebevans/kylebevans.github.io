@@ -28,3 +28,7 @@ div#nav nav li {
   font-size: .875em;
   padding: 0;
 }
+
+div#blankcolumn {
+  flex: 1 1 auto;
+}
