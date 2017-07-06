@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: doctype
 ---
 
 {% assign post = site.posts.first %}
