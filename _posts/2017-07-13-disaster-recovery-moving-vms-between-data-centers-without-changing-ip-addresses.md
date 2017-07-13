@@ -42,5 +42,4 @@ Note: If you are using two stateful firewalls to peer with ISPs, be sure to use 
 I learned about this trick from "The Godfather" Ivan Pepelnjak on his blog post
 <a href="http://blog.ipspace.net/2012/10/is-layer-3-dci-safe.html">Is Layer-3 DCI Safe?</a>
 
-I've chosen to repeat his material here since I searched for a suitable solution for a long time before finding his post, and I don't think this trick is well published.
 
