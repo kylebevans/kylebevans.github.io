@@ -37,10 +37,10 @@ Let's assume we have some type of backup software that will backup VMs for us an
 Note: If you are using two stateful firewalls to peer with ISPs, be sure to use AS-Path prepending or have your ISP use a local preference to make sure all traffic flows through one of the firewalls.  If you don't, then return traffic might not go back through the firewall it originated through, and the other firewall will drop it since it's not in the state table.  However, if you are using stateless firewalls or ACLs then don't worry about it.
 
 
-Credits:
+### Credits:
 
 I learned about this trick from "The Godfather" Ivan Pepelnjak on his blog post
-<a href="http://blog.ipspace.net/2012/10/is-layer-3-dci-safe.html">Is Layer 3 DCI Safe?</a>
+<a href="http://blog.ipspace.net/2012/10/is-layer-3-dci-safe.html">Is Layer-3 DCI Safe?</a>
 
 I've chosen to repeat his material here since I searched for a suitable solution for a long time before finding his post, and I don't think this trick is well published.
 
