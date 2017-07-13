@@ -32,7 +32,7 @@ Let's assume we have some type of backup software that will backup VMs for us an
 * Restore your VMs at the Data Center that is still online and service will be restored.
 * Use BGP on the host so that a VM can advertise its IP to the network instead of needing a default gateway. I will make a future blog post about this.
 
-![Data Center Internet Edge]({{ site.url }}/assets/image.png)
+![Data Center Internet Edge]({{ site.url }}/assets/Data Center Internet Edge.png)
 
 Note: If you are using two stateful firewalls to peer with ISPs, be sure to use AS-Path prepending or have your ISP use a local preference to make sure all traffic flows through one of the firewalls.  If you don't, then return traffic might not go back through the firewall it originated through, and the other firewall will drop it since it's not in the state table.  However, if you are using stateless firewalls or ACLs then don't worry about it.
 
