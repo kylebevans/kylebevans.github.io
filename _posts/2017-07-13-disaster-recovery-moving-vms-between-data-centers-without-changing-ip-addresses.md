@@ -26,7 +26,7 @@ Let's assume we have some type of backup software that will backup VMs for us an
 * Do not have any dependencies at all between Data Centers.  Shared State = Shared Fate!
 * Use BGP to announce your IP Address blocks to your ISPs.
 * Dedicate specific IP blocks to specific Data Centers: DC1: 10.0.0.0/24; DC2: 10.0.1.0/24.
-* Announce a supernet of the two blocks from both Data Centers: 10.0.0.0/23
+* Announce an aggregate of the two blocks from both Data Centers: 10.0.0.0/23
 * In Internet Routing, the most specific routes are always selected, so as long as both DCs are online, the /23 route will never be used.
 * If one DC goes offline, the Internet will start using the /23 route and send traffic to the other DC.  Caveat: BGP must go down at the offline Data Center.
 * Restore your VMs at the Data Center that is still online and service will be restored.
