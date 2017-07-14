@@ -19,7 +19,7 @@ commentIssueId: 2
 July 13, 2017
 
 ## Problem
-Let's assume we have some type of backup software that will backup VMs for us and copy them to our disaster recovery data center.  If we restore those VMs as is in at our DR site, they will have the IP addresses from the offline primary site.  Some software such as Veeam or VMware SRA can be configured to change the IP address for us, but how can it be done without changing the IP Address?
+Let's assume we have some type of backup software that will backup VMs for us and copy them to our disaster recovery data center.  If we restore those VMs at our DR site, they will have the IP addresses from the offline primary site.  Some software such as Veeam or VMware SRA can be configured to change the IP address for us, but how can it be done without changing the IP Address?
 
 ## Solution
 * Do not use a Data Center Interconnect (DCI) like OTV.  Shared State = Shared Fate!
