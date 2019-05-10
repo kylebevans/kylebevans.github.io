@@ -44,3 +44,9 @@ The design above is technically a 3-stage clos network, but the two leaf stages 
 
 
 ![5 Stage Clos Network]({{ site.url }}/assets/5-stage-clos-network.png)
+
+
+### Credits:
+
+Petr Lapukhov's RFC: 
+<a href="https://tools.ietf.org/html/rfc7938">Use of BGP for Routing in Large-Scale Data Centers</a>
