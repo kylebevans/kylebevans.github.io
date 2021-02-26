@@ -25,6 +25,7 @@ div#nav {
   flex: 0 1 auto;
   @include small {
     visibility: hidden;
+    display: none;
   }
 }
 
