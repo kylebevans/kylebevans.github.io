@@ -1,12 +1,12 @@
 theme: jekyll-theme-cayman
 
-title: getworking
+title: Kyle Evans
 
 name: Kyle Evans
 
 author: Kyle Evans
 
-description: Networking, Infrastructure, and DevOps
+description:
 
 defaults:
   -
@@ -18,15 +18,15 @@ defaults:
 footer-links:
   github: kylebeevans
   linkedin:
-  twitter: kylebe
-  
+  twitter: bekyle
+
 url: http://getworking.org
 
 permalink: /:title/
 
 gems:
   - jekyll-sitemap
-  
+
 exclude:
   - Gemfile
   - Gemfile.lock
