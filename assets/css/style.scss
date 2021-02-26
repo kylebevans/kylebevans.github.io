@@ -23,6 +23,9 @@ div#nav {
   padding-right: 1vw;
   width: 20vw;
   flex: 0 1 auto;
+  @include small {
+    visibility: hidden;
+  }
 }
 
 div#nav nav ul {
