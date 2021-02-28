@@ -2,7 +2,7 @@
 layout: default
 title:  "Microbursts, Queuing, and Network Simulation with the Poisson Probability Distribution"
 date:   2021-02-28 17:26:00 -0500
-categories: networking datacenter bgp
+categories: networking datacenter queuing poisson microbursts simulation statistics
 permalink: /microbursts-queuing-network-simulation-poisson/
 commentIssueId: 4
 ---

@@ -1,1 +1,1 @@
-getworking.org blog
+getworking.org posts
