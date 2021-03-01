@@ -51,6 +51,11 @@ table {
     table, thead, tbody, th, td, tr {
       font-size:2vw;
     }
+    th,
+    td {
+      text-align: left;
+      padding: 0.1rem 0.1rem;
+    }
   }
 }
 
