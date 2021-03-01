@@ -57,7 +57,7 @@ Yes, at least for this traffic in particular, and only if we address the two cav
 * To address bursts and lulls, we can vary our interarrival rate as we run our simulation. Instead of just keeping the interarrival rate fixed as an exponential with mean 1/&lambda;, we can change lambda throughout the simulation causing packets to arrive much closer together or farther apart thus creating bursts and lulls. I did not do any analysis of a pattern among the peaks and valleys, but in the simulation I modeled the changing &lambda; with a uniform random distribution.  Bursts and lulls in a Poisson process are called **Poisson Clumping**, and I've included a resource in the Credits section that details more sophisticated techniques of modeling them.[^1]
 
 
-If we needed the heavy tail, we could try some other techniques to account for it in our model such as using the Pareto distribution or using self-similarity.  Pareto is similar to exponential, but it has a heavier tail.  I tried out a plot of the Pareto distribution, and it fit the heavy tail of our data better, but it did not fit the primary section of our histogram very well.  Self-similarity is a technique that assumes that a small part of our data is similar to a large part.  For example, a graph over microseconds of network traffic will be similar to a graph of seconds or longer time periods. I did not do any analysis for self-similarity, but I have included some resources in the Credits section below that talk more about these techniques.[^2,][^3]
+If we needed the heavy tail, we could try some other techniques to account for it in our model such as using the Pareto distribution or using self-similarity.  Pareto is similar to exponential, but it has a heavier tail.  I tried out a plot of the Pareto distribution, and it fit the heavy tail of our data better, but it did not fit the primary section of our histogram very well.  Self-similarity is a technique that assumes that a small part of our data is similar to a large part.  For example, a graph over microseconds of network traffic will be similar to a graph of seconds or longer time periods. I did not do any analysis for self-similarity, but I have included some resources in the Credits section below that talk more about these techniques.[^2][^3]
 
 ### Simulating a Network to Evaluate FIFO vs. Priority Queuing
 * First-in, First out (FIFO) is typically the default queuing mechanism for switchport buffers unless QoS is setup.
@@ -117,6 +117,6 @@ The best way to avoid dropped packets and queuing delay is to not have the probl
 ### Credits:
 
 [^1]: <a href="https://www.stat.berkeley.edu/~aldous/Book2/book.pdf">Probability Approximations via the Poisson Clumping Heuristic</a>
-[^2,]: <a href="https://www.icir.org/vern/papers/poisson.TON.pdf">Wide Area Traffic: The Failure of Poisson Modeling</a>
+[^2]: <a href="https://www.icir.org/vern/papers/poisson.TON.pdf">Wide Area Traffic: The Failure of Poisson Modeling</a>
 [^3]: <a href="https://www.cse.wustl.edu/~jain/cse567-06/ftp/traffic_models1/">From Poisson Processes to Self-Similarity: a Survey of Network Traffic Models</a>
 [^4]: <a href="https://www.arista.com/assets/data/pdf/Whitepapers/BigDataBigBuffers-WP.pdf">Why Big Data Needs Big Buffer Switches - Arista Networks</a>
