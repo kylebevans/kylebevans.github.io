@@ -46,6 +46,10 @@ div#blankcolumn {
   flex: 1 1 auto;
 }
 
+figure, iframe, img, picture, video {
+  height: auto;
+  max-width: 100%;
+}
 
 /********************************
 *
