@@ -87,11 +87,7 @@ Here is the Priority Queue:
 
 ### Results
 
-| Block Name        | Block | Ave Length        | Max Length   | Ave Wait            | Max Wait            | Queue Length |
-|-------------------|-------|-------------------|--------------|---------------------|---------------------|--------------|
-| Best Effort Queue | Queue | 746.5±18.52       | 1190±0.000   | 5.383e-05±1.332e-06 | 8.826e-05±1.898e-07 | 942.1±169.9  |
-| FIFO buffer       | Queue | 733.3±19.65       | 1190±0.000   | 4.932e-05±1.314e-06 | 7.997e-05±          | 679.2±321.1  |
-| Priority Queue    | Queue | 0.03598±4.211e-05 | 4.100±0.2262 | 3.600e-08±2.932e-11 | 2.569e-07±1.082e-08 | 0.000±0.000  |
+
 
 These numbers are 95% confidence intervals, which means that if we did this same exact simulation 100 times and computed 100 confidence intervals, 95 of them should contain the "right" number and 5 of them won't.  For the sake of analysis, we'll assume the ones we have here contain the right value, but there is a chance they don't.
 
