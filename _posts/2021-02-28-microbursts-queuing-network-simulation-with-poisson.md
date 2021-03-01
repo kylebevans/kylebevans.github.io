@@ -46,7 +46,7 @@ As you can see, port 1433 dominated the packets, which is SQL Server.  Another b
 
 Next, I graphed a histogram of packet interrarrival times to see if it followed the exponential distribution, but this graph was basically unreadable.  There was a huge spike near 0, but also a long, flat, heavy tail that reached out to about 3.5 seconds.  This happened because the vast majority of packet interarrival times were in the microseconds or even nanoseconds, but there were still a lot of large interarrival times due to lulls between flows.  So for kicks, I decided to cut off the heavy tail where it really flattened out, which was about .002s.  Here is the histogram of measured arrival times below .002s vs. the exponential distribution with the mean of the measured arrival times below .002s:
 
-![A histogram of measured packet interarrival times below .002s overlayed on an exponential distribution with 1/(mean interarrival time below .002s). The measured histogram is in red and has several spikes that go above the exponential distribution which is in blue.  However, the measured histogram does kind of line up with the exponential distribution on its decreasing curve.]({{ site.url }}/assets/packet interarrival times vs. exponential.png)
+![A histogram of measured packet interarrival times below .002s overlayed on an exponential distribution with 1/mean interarrival time below .002s. The measured histogram is in red and has several spikes that go above the exponential distribution which is in blue.  However, the measured histogram does kind of line up with the exponential distribution on its decreasing curve.]({{ site.url }}/assets/packet interarrival times vs. exponential.png)
 
 Using a sophisticated statistical test known as "eyeballing it," the measured packet interarrival times do seem to follow the exponential curve with some caveats. First, I cut off the heavy tail of course.  Second, there are a few peaks and valleys that go above and below the exponential curve.  This effect is known as **multimodality**.  These peaks and valleys are caused by bursts and lulls of packet arrivals related to **flows**.  Packets on a network are not independent; they are part of flows which are sessions between senders and receivers.  Packets that are part of the same flow will have short interarrival times, and if a link has a burst of flows at once, then total packet interarrival times will be even shorter.  These bursts show up as the peaks on our chart. Conversely, there may also be lulls between flows on a link which show up as the valleys on our chart.
 
@@ -86,12 +86,11 @@ Here is the Priority Queue:
 * The Priority queue works exactly like the FIFO queue except now there is a steady 1,000,000pps generated of priority traffic with exponential interarrival times.  The port will transmit packets from the priority queue before the best effort queue.
 
 ### Results
-| Block Name        | Block | Ave Length        | Max Length   | Ave Wait            | Max Wait            | Queue Length | Arrivals        | Departures      | Utilization      |
-|-------------------|-------|-------------------|--------------|---------------------|---------------------|--------------|-----------------|-----------------|------------------|
-
-| Best Effort Queue | Queue | 746.5±18.52       | 1190±0.000   | 5.383e-05±1.332e-06 | 8.826e-05±1.898e-07 | 942.1±169.9  | 1.387e+07±1943  | 1.387e+07±1919  | 0.9982±0.0002241 |
-| FIFO buffer       | Queue | 733.3±19.65       | 1190±0.000   | 4.932e-05±1.314e-06 | 7.997e-05±          | 679.2±321.1  | 1.487e+07±3202  | 1.487e+07±3137  | 0.9981±0.0003823 |
-| Priority Queue    | Queue | 0.03598±4.211e-05 | 4.100±0.2262 | 3.600e-08±2.932e-11 | 2.569e-07±1.082e-08 | 0.000±0.000  | 9.995e+05±611.2 | 9.995e+05±611.2 | 0.0351±3.713e-05 |
+| Block Name        | Block | Ave Length        | Max Length   | Ave Wait            | Max Wait            | Queue Length |
+|-------------------|-------|-------------------|--------------|---------------------|---------------------|--------------|
+| Best Effort Queue | Queue | 746.5±18.52       | 1190±0.000   | 5.383e-05±1.332e-06 | 8.826e-05±1.898e-07 | 942.1±169.9  |
+| FIFO buffer       | Queue | 733.3±19.65       | 1190±0.000   | 4.932e-05±1.314e-06 | 7.997e-05±          | 679.2±321.1  |
+| Priority Queue    | Queue | 0.03598±4.211e-05 | 4.100±0.2262 | 3.600e-08±2.932e-11 | 2.569e-07±1.082e-08 | 0.000±0.000  |
 
 These numbers are 95% confidence intervals, which means that if we did this same exact simulation 100 times and computed 100 confidence intervals, 95 of them should contain the "right" number and 5 of them won't.  For the sake of analysis, we'll assume the ones we have here contain the right value, but there is a chance they don't.
 
