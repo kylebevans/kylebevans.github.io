@@ -86,8 +86,8 @@ Here is the Priority Queue:
 * The Priority queue works exactly like the FIFO queue except now there is a steady 1,000,000pps generated of priority traffic with exponential interarrival times.  The port will transmit packets from the priority queue before the best effort queue.
 
 ### Results
-| Block Name        | Block | Ave Length        | Max Length   | Ave Wait            | Max Wait            | Queue Length |
 
+| Block Name        | Block | Ave Length        | Max Length   | Ave Wait            | Max Wait            | Queue Length |
 |-------------------|-------|-------------------|--------------|---------------------|---------------------|--------------|
 | Best Effort Queue | Queue | 746.5±18.52       | 1190±0.000   | 5.383e-05±1.332e-06 | 8.826e-05±1.898e-07 | 942.1±169.9  |
 | FIFO buffer       | Queue | 733.3±19.65       | 1190±0.000   | 4.932e-05±1.314e-06 | 7.997e-05±          | 679.2±321.1  |
